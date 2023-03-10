@@ -43,13 +43,8 @@
   color: var(--logo-color);
 }
 .contactos {
-  color: var(--contactos-color);
-  font-weight: 500;
-  font-size: 14px;
+  color: currentColor;
   text-decoration: none;
-}
-.contactos:hover {
-  color: var(--logo-color);
 }
 
 .h1 {
@@ -187,6 +182,8 @@ h2 {
 .boton-portafolio:hover {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: #2196f3;
+  color: #ffffff;
 }
 
 .boton-portafolio:active {
@@ -225,21 +222,11 @@ h2 {
   list-style: none;
 }
 
-.contact-inf {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  font-family: 'Roboto';
-  font-style: normal;
-  gap: 50px;
-  align-items: center;
-}
-
 .titulo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(/images/principalsvg.svg);
+  background-image: url(/images/Imagen.fondo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: 600px;
@@ -394,6 +381,11 @@ circle:hover {
   border-color: #eeeeee;
   height: 404px;
 }
+.bloque-portafolio:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
 
 h4 {
   display: flex;
@@ -416,25 +408,6 @@ h4 {
 .contenedor {
   width: 1200px;
   margin: 0 auto;
-}
-
-.marco-clientes-regulares {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 372px;
-  background-color: var(--h1-color);
-}
-
-.marco-logo-clientes {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.marco-cliente {
-  border: solid 1px #afb1b8;
-  border-radius: 4px;
 }
 
 .general-footer {
@@ -474,4 +447,126 @@ h4 {
   justify-content: center;
   align-items: center;
   width: 230px;
+}
+
+.svg-redes {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 44px;
+  height: 44px;
+}
+
+.h2-clientes {
+  display: flex;
+  margin-top: 59px;
+  margin-bottom: 44px;
+}
+
+.social-icon {
+  color: currentColor;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  fill: #afb1b8;
+}
+
+.social-icon:hover {
+  fill: #ffffff;
+  background-color: #2196f3;
+}
+
+.social-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 16px;
+}
+
+.marco-clientes-regulares {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  height: 372px;
+  background-color: var(--h1-color);
+}
+
+.marco-logo-clientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-left: 0;
+}
+
+.marco-cliente {
+  display: flex;
+  fill: #afb1b8;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 81 px;
+  margin-left: 0;
+  border: solid #afb1b8;
+  border-radius: 4px;
+}
+
+.marco-cliente:hover {
+  fill: #2196f3;
+  border: solid #2196f3;
+}
+
+.social-icon-footer {
+  background: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  fill: #afb1b8;
+}
+
+.social-icon-footer:hover {
+  fill: #ffffff;
+  background-color: #2196f3;
+  padding-left: 0;
+  margin-left: 0;
+}
+.social-icons-footer {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.correo-telefono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: currentColor;
+  color: #757575;
+  fill: #757575;
+}
+.correo-telefono:hover {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
+.contact-inf {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  gap: 50px;
+  align-items: right;
+  margin-left: 200px;
 }
