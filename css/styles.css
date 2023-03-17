@@ -32,11 +32,20 @@
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   color: var(--body-color);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
 }
+
 .link-actual {
   left: 453px;
   top: 32;
   color: var(--logo-color);
+  height: 80px;
+  border-bottom: solid #2196f3 4px;
+  border-block-start: -1px;
+  border-radius: 2px;
 }
 
 .links:hover {
@@ -184,11 +193,13 @@ h2 {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   background-color: #2196f3;
   color: #ffffff;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
 }
 
 .boton-portafolio:active {
   background-color: var(--logo-color);
   color: var(--h1-color);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .imagenes-portafolio {
@@ -216,6 +227,7 @@ h2 {
 .menu {
   display: flex;
   align-items: right;
+  justify-content: center;
   gap: 50px;
   font-family: 'Roboto';
   /*top: 32px;*/
@@ -313,20 +325,6 @@ h2 {
   margin-top: 16px;
 }
 
-rect {
-  fill: var(--marco-redes);
-  width: 100%;
-  height: 100%;
-}
-circle {
-  fill: var(--circulo-redes);
-  width: 44px;
-  height: 44pxs;
-}
-circle:hover {
-  fill: var(--hover-circulo);
-}
-
 .persona {
   display: flex;
   padding-top: 0;
@@ -380,11 +378,13 @@ circle:hover {
   border: 1px solid;
   border-color: #eeeeee;
   height: 404px;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
 }
 .bloque-portafolio:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h4 {
@@ -426,14 +426,6 @@ h4 {
   color: var(--marco-redes);
 }
 
-.rect-footer {
-  fill: #2f303a;
-}
-
-.circle-footer {
-  fill: gray;
-}
-
 .correo {
   display: flex;
   justify-content: center;
@@ -472,6 +464,7 @@ h4 {
   justify-content: center;
   border-radius: 50px;
   fill: #afb1b8;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
 }
 
 .social-icon:hover {
@@ -515,11 +508,13 @@ h4 {
   margin-left: 0;
   border: solid #afb1b8;
   border-radius: 4px;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
 }
 
 .marco-cliente:hover {
   fill: #2196f3;
   border: solid #2196f3;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-footer {
@@ -531,13 +526,13 @@ h4 {
   justify-content: center;
   border-radius: 50px;
   fill: #afb1b8;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
 }
 
 .social-icon-footer:hover {
   fill: #ffffff;
   background-color: #2196f3;
-  padding-left: 0;
-  margin-left: 0;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons-footer {
   display: flex;
@@ -554,8 +549,10 @@ h4 {
   color: currentColor;
   color: #757575;
   fill: #757575;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
 }
 .correo-telefono:hover {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196f3;
   fill: #2196f3;
 }
@@ -570,3 +567,158 @@ h4 {
   align-items: right;
   margin-left: 200px;
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.modal {
+  width: 500px;
+  height: 500px;
+  background-color: #ffffff;
+  position: fixed;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.boton-cerrar {
+  display: flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  border: solid gray 1px;
+  transition: background-color 250ms linear, transform 250ms ease-in-out;
+}
+
+.boton-cerrar:active {
+  color: #2196f3;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.imagen-estudio {
+  display: flex;
+  position: relative;
+  top: 0;
+}
+
+.descripcion-imagen-estudio {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.bloque-portafolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.bloque-portafolio:hover .overlay {
+  transform: translatey(0);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 294px;
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(404px);
+  transition: transform 250ms ease;
+
+  bottom: 110px;
+  transition: transform 250ms ease-in-out;
+}
+
+.overlay > p {
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-sobre {
+  width: 1.3330078125em;
+}
+
+.icon-Vector {
+  width: 0.625em;
+}
+
+.icon-Logo5 {
+  width: 2em;
+}
+
+.icon-Logo4 {
+  width: 2em;
+}
+
+.icon-Logo3 {
+  width: 2em;
+}
+
+.icon-Logo2 {
+  width: 2em;
+}
+
+.icon-Logo1 {
+  width: 2em;
+}
+
+.icon-Logo {
+  width: 2em;
+}
+
+.icon-Union1 {
+  width: 0.8916015625em;
+}
+
+.icon-reloj-1 {
+  width: 0.974609375em;
+}
+
+@import 'node_modules/modern-normalize/modern-normalize.css';

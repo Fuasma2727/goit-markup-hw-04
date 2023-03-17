@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
     <title>Principal</title>
   </head>
   <body class="body">
@@ -52,9 +52,14 @@
       <div class="titulo">
         <div class="imagen-titulo">
           <h1 class="h1">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
-          <button type="button" class="botonh1">
-            Solicite nuestro servicio
+          <button type="button" class="botonh1" data-modal-open>Solicite nuestro servicio
           </button>
+        
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+          <button data-modal-close class="boton-cerrar">X</button>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -114,26 +119,30 @@
 
         <h2>A qué nos dedicamos</h2>
         <ul class="imagenes">
-          <li>
+          <li class="imagen-estudio">
             <img
               src="images/imagen1.jpg"
               alt="Foto con computador"
               width="373.26px"
+              
             />
+            <div class="descripcion-imagen-estudio"> APLICACIONES DE ESCRITORIO</div>
           </li>
-          <li>
+          <li class="imagen-estudio">
             <img
               src="images/imagen2.jpg"
               alt="Foto con celular"
-              width="373.16px"
-            />
+              width="373.16px"/>
+              <div class="descripcion-imagen-estudio"> APLICACIONES MÓVILES</div>
+            
           </li>
-          <li>
+          <li class="imagen-estudio">
             <img
               src="images/imagen3.jpg"
               alt="Foto con Tablet"
               width="373.16px"
             />
+            <div class="descripcion-imagen-estudio">SOLUCIONES DE DISEÑO</div>
           </li>
         </ul>
       </div>
@@ -402,5 +411,6 @@
         </div>
       </footer>
     </main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
